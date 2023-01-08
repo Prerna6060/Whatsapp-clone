@@ -8,13 +8,13 @@ function App() {
     <div className="app">
       <div className="app_body">
         <Router>
+          <Sidebar />
           <Switch>
-            <Route path="/app">
-              <Sidebar />
+            <Route path="/rooms/:roomId">
               <Chat />
             </Route>
             <Route path="/">
-              <h1>Home Screen</h1>
+              <Chat />
             </Route>
           </Switch>
         </Router>
@@ -24,3 +24,4 @@ function App() {
 }
 
 export default App;
+
